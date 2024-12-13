@@ -1,6 +1,7 @@
 import { merge } from 'webpack-merge';
 import path from 'path';
 import commonConfig from './webpack.common.js';
+import TerserPlugin from 'terser-webpack-plugin';
 
 const prodConfig = {
     mode: 'production',
@@ -10,6 +11,16 @@ const prodConfig = {
         library: 'MyLibrary', // 替换为你的库名
         libraryTarget: 'umd',
         globalObject: 'this', // 兼容Node.js和浏览器
+    },
+    optimization: {
+        minimize: true, // 启用压缩
+        minimizer: [new TerserPlugin({
+            terserOptions: {
+                compress: {
+                    // drop_console: true, // 删除console.log
+                },
+            },
+        })],
     },
 };
 
