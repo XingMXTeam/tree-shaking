@@ -1,3 +1,3 @@
-import { a } from './test.js';
+import { cube } from './test.js';
 
-console.log(a);
+console.log(cube(12));

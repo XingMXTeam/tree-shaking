@@ -1,8 +1,8 @@
-import a from './a.js';
+import { cube } from './a.js';
 import b from './b.js';
 import c from './c.js';
 
-export { a, b, c };
+export { cube, b, c };
 
-export default { a, b };
+// export default { cube,  b };
 // export default /*#__PURE__*/(()=>({ a, b }))()

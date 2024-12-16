@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build:dev": "webpack --config webpack.dev.js",
-    "build:prod": "webpack --config webpack.prod.js",
+    "build:prod:umd": "webpack --config webpack.umd.prod.js",
+    "build:prod:es": "webpack --config webpack.es.prod.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
